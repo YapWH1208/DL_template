@@ -130,7 +130,7 @@ class Decoder(nn.Module):
         attention_output = self.selfAttention(x, x, x, targetMask)
         x = self.norm1(x + self.dropout(attention_output))
         attention_output = self.crossAttention(x, encoderOutput, encoderOutput, sourceMask)
-        x = self.norm2(x + self.dropput(attention_output))
+        x = self.norm2(x + self.dropout(attention_output))
         feedForward_output = self.feedForward(x)
         x = self.norm3(x + self.dropout(feedForward_output))
 
