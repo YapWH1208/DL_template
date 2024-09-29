@@ -119,4 +119,3 @@ if __name__ == "__main__":
 
     x = torch.randn(1, 1, 48000)
     x = model(x)
-    print(x.shape)
